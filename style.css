@@ -1,0 +1,74 @@
+*{
+  --blue-dark:#06142e;
+  --blue:#0b2a5b;
+  --gold:#d4a62a;
+  --gold-light:#f0c94d;
+  --text:#5a6577;
+}
+body{font-family:'Montserrat',sans-serif;color:var(--text);}
+
+/* ---------- NAVBAR ---------- */
+.navbar{position:absolute;top:0;left:0;width:100%;z-index:10;padding:18px 0;}
+
+.navbar .nav-link{color:#fff;font-weight:700;font-size:.85rem;padding:.5rem 1rem;position:relative;}
+
+.navbar .nav-link:hover,
+
+.navbar .nav-link.active{color:var(--gold-light);}
+.navbar .nav-link.active::after{content:"";position:absolute;left:1rem;right:1rem;bottom:0;height:2px;background:var(--gold-light);}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.brand img{height:48px;width:auto;}
+.brand span{color:#fff;font-weight:800;font-size:1.05rem;line-height:1.1;letter-spacing:.5px;}
+.brand small{display:block;color:var(--gold-light);font-weight:600;font-size:.62rem;letter-spacing:1.5px;}
+.btn-gold{border:2px solid var(--gold);color:var(--gold-light);border-radius:30px;font-weight:700;font-size:.82rem;padding:.45rem 1.2rem;background:transparent;transition:.3s;}
+.btn-gold:hover{background:var(--gold);color:var(--blue-dark);}
+.nav-social a{color:#fff;margin-right:14px;font-size:.95rem;transition:.3s;}
+.nav-social a:hover{color:var(--gold-light);}
+
+@media(min-width:992px){
+  .brand{position:absolute;left:50%;transform:translateX(-50%);top:-4px;
+    background:linear-gradient(180deg,var(--blue),var(--blue-dark));padding:14px 20px;border-radius:0 0 12px 12px;border-bottom:3px solid var(--gold);}
+}
+@media(max-width:991px){
+  .navbar{background:var(--blue-dark);position:relative;}
+  .navbar-collapse{padding-top:12px;}
+  .navbar-toggler{border-color:var(--gold);}
+  .navbar-toggler-icon{filter:invert(1);}
+}
+
+/* ---------- HERO ---------- */
+.page-hero{
+  height:260px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(rgba(6,20,46,.78),rgba(6,20,46,.78)),url('Images/about-hero.jpg') center/cover no-repeat,var(--blue-dark);
+}
+.page-hero h1{color:#fff;font-weight:800;font-size:3.2rem;letter-spacing:1px;margin:0;}
+@media(max-width:991px){.page-hero{height:200px}.page-hero h1{font-size:2.4rem}}
+
+/* ---------- ABOUT SECTION ---------- */
+.about{padding:100px 0;}
+.img-stack{position:relative;max-width:420px;margin:auto;padding-bottom:70px;}
+.img-stack .img-1{width:85%;height:440px;object-fit:fill;display:block;box-shadow:0 15px 35px rgba(0,0,0,.12);}
+.img-stack .img-2{position:absolute;right:0;bottom:0;width:60%;height:300px;object-fit:fill;border:8px solid #fff;box-shadow:0 15px 35px rgba(0,0,0,.2);}
+.script{font-family:'Pacifico',cursive;color:#a87b0c;font-size:1.4rem;}
+.about h2{color:var(--blue-dark);font-weight:800;font-size:2.4rem;line-height:1.2;margin:8px 0 20px;}
+.about p{font-size:.95rem;line-height:1.9;}
+.signature{font-family:'Mrs Saint Delafield',cursive;font-size:3.4rem;color:var(--blue);margin-top:10px;}
+.features li{list-style:none;margin-bottom:8px;font-weight:600;color:var(--blue-dark);font-size:.9rem;}
+.features i{color:var(--gold);margin-right:8px;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--blue-dark);color:#b9c3d6;padding:70px 0 0;border-top:4px solid var(--gold);}
+footer h5{color:#fff;font-weight:700;font-size:1rem;margin-bottom:22px;position:relative;padding-bottom:10px;}
+footer h5::after{content:"";position:absolute;left:0;bottom:0;width:35px;height:2px;background:var(--gold);}
+footer p,footer li,footer a{font-size:.88rem;}
+footer ul{padding:0;list-style:none;}
+footer ul li{margin-bottom:10px;}
+footer a{color:#b9c3d6;text-decoration:none;transition:.3s;}
+footer a:hover{color:var(--gold-light);padding-left:4px;}
+.f-brand{display:flex;align-items:center;gap:10px;margin-bottom:15px;}
+.f-brand img{height:44px;}
+.f-brand span{color:#fff;font-weight:800;}
+.f-social a{display:inline-flex;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;align-items:center;justify-content:center;color:var(--gold-light);margin-right:8px;}
+.f-social a:hover{background:var(--gold);color:var(--blue-dark);padding-left:0;}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding:20px 0;text-align:center;font-size:.82rem;}
+
